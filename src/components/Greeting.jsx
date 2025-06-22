@@ -1,5 +1,5 @@
 import { useState } from "react";
-import './index.less'
+import "./index.less";
 
 export default function Greeting({ messages }) {
   const randomMessage = () =>
@@ -9,8 +9,8 @@ export default function Greeting({ messages }) {
 
   return (
     <div>
-        <h2 className="test">我啊哈哈</h2>
-      <h3 className="text-[red] text-[20px]">{greeting}！感谢来访！</h3>
+      <h2 className="test">我啊哈哈</h2>
+      <h3 className="text-[20px] text-[red]">{greeting}！感谢来访！</h3>
       <button onClick={() => setGreeting(randomMessage())}>新的欢迎语</button>
     </div>
   );

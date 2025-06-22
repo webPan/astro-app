@@ -10,5 +10,11 @@ export default {
         parser: "astro",
       },
     },
+    {
+      files: "*.tsx",
+      options: {
+        parser: "typescript", // 或 "babel-ts"
+      },
+    },
   ],
 };
