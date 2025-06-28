@@ -1,26 +1,34 @@
 ---
-import './../tailwind.css'
+import "./../tailwind.css";
+import Header from "@/components/header/index.astro";
+import Footer from "@/components/footer/index.astro";
+import "antd/dist/antd.css";
 ---
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
-  </head>
-  <body>
-    <slot/>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="generator" content={Astro.generator} />
+  <title>Astro Basics</title>
+</head>
+<body>
+<div class="container m-auto flex flex-col">
+  <Header />
+  <div class="flex-1">
+    <slot />
+  </div>
+  <Footer />
+</div>
+</body>
 </html>
 
 <style>
   html,
-  body {
-    margin: 0;
-    width: 100vh;
+  body,
+  .container {
     min-height: 100vh;
   }
 </style>

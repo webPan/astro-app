@@ -17,14 +17,17 @@
     "@tailwindcss/vite": "^4.1.10",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
-    "antd": "^5.26.1",
+    "antd": "^4.24.16",
     "astro": "^5.9.3",
     "axios": "^1.10.0",
+    "js-cookie": "^3.0.5",
     "preact": "10.26.9",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "zustand": "^5.0.6"
   },
   "devDependencies": {
+    "@types/js-cookie": "^3.0.6",
     "autoprefixer": "^10.4.21",
     "less": "^4.3.0",
     "postcss": "^8.5.6",

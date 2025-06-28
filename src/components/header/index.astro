@@ -1,0 +1,37 @@
+---
+const navs = [
+  {
+    name: "首页",
+    link: "/"
+  },
+  {
+    name: "发布",
+    link: "/post"
+  },
+  {
+    name: "关于我",
+    link: "/about"
+  },
+  {
+    name: "登录",
+    link: "/login"
+  },
+  {
+    name: "md",
+    link: "/md"
+  }
+];
+---
+<header>
+  <ul class="flex gap-[20px] justify-center p-[20px] text-gray-900">
+    {
+      navs.map((item) => {
+        return (
+          <li>
+            <a href={item.link}>{item.name}</a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</header>

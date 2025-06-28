@@ -1,17 +1,12 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import Greeting from "@/components/Greeting";
-
-const data = await new Promise((resolve, reject)=>{
-  setTimeout(()=>{
-    resolve(['a','b','c'])
-  })
-})
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const userInfo = Astro.cookies.get("userInfo")?.value;
 ---
 
 <Layout>
-  <Greeting client:load messages={["Hi", "Hello", "Howdy", "Hey there"]} />
+  <div>首页</div>
+  <h2>用户信息</h2>
+  <code>
+    {userInfo}
+  </code>
 </Layout>
