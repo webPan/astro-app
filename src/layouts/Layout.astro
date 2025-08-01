@@ -9,7 +9,10 @@ import "antd/dist/antd.css";
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
+  <meta
+    name="viewport"
+    content="initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover"
+  />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="generator" content={Astro.generator} />
   <title>Astro Basics</title>
@@ -19,6 +22,7 @@ import "antd/dist/antd.css";
   <Header />
   <div class="flex-1">
     <slot />
+    <div id="app"></div>
   </div>
   <Footer />
 </div>
@@ -32,3 +36,5 @@ import "antd/dist/antd.css";
     min-height: 100vh;
   }
 </style>
+<script type="module" src="./../../public/app/assets/index-BISzQd3n.js"
+></script>

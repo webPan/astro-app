@@ -1,7 +1,14 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import "./index.less";
+const t = (t1: string) => (t2: string) => {
+  console.log({ t1, t2 });
+};
+t(1)(2);
 ---
 
 <Layout>
   <div>关于我</div>
+  <div class="safe-area-top">top</div>
+  <div class="safe-area-bottom">bottom</div>
 </Layout>

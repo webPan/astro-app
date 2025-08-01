@@ -1,0 +1,12 @@
+---
+import Layout from "@/layouts/Layout.astro";
+const userInfo = Astro.cookies.get("userInfo")?.value;
+---
+
+<Layout>
+  <div>首页</div>
+  <h2>用户信息</h2>
+  <code>
+    {userInfo}
+  </code>
+</Layout>

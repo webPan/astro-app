@@ -2,14 +2,26 @@ import { Button, Form, Input } from "antd";
 import { useUserStore } from "@/store";
 import { getUserInfo } from "@/services/common.ts";
 
+const f = "images";
+const file = "avatar";
+const module = await import(`./${f}/${file}.png`);
+
+function getImageUrl(name: string) {
+  return new URL(`./images/${name}.png`, import.meta.url).href;
+}
+
 const LoginForm = () => {
   const { setUserInfo, userInfo } = useUserStore();
   const onFinish = async (values: Record<string, any>) => {
     setUserInfo(await getUserInfo(values));
   };
+  const url = getImageUrl("avatar");
+  console.log(url);
+
   console.log({ userInfo });
   return (
     <div className="m-auto min-h-[300px] w-[300px]">
+      <img src={url} alt="" />
       <Form
         name="basic"
         initialValues={{ remember: true }}
